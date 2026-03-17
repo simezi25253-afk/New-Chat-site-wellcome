@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>新規登録</title>
+</head>
+<body>
+  <h1>新規登録</h1>
+
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+
+  <form action="/register" method="POST">
+    <input type="text" name="username" placeholder="ユーザー名" required><br>
+    <input type="password" name="password" placeholder="パスワード" required><br>
+    <input type="text" name="accessCode" placeholder="アクセスコード（半角数字）" required><br>
+    <button type="submit">登録</button>
+  </form>
+
+  <a href="/">戻る</a>
+</body>
+</html>
