@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ログイン</title>
+</head>
+<body>
+  <h1>ログイン</h1>
+
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+
+  <form action="/login" method="POST">
+    <input type="text" name="accessCode" placeholder="アクセスコード" required><br>
+    <button type="submit">ログイン</button>
+  </form>
+
+  <a href="/">戻る</a>
+</body>
+</html>
