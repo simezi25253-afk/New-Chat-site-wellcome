@@ -5,6 +5,8 @@ const authRoutes = require("./routes/auth");
 require("dotenv").config();
 
 app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
+
 app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGO_URI)
