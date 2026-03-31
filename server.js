@@ -8,7 +8,8 @@ require("dotenv").config();
 app.set("view engine", "ejs");
 
 // Render環境ではプロジェクトが1階層深くなるため、viewsのパスを修正
-app.set("views", __dirname + "/New-Chat-site-wellcome/views");
+app.set("views", __dirname + "/views");
+
 
 app.use(express.urlencoded({ extended: true }));
 
